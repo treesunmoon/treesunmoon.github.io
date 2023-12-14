@@ -39,8 +39,6 @@
 
 
 
-<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
-
 <script src="/js/iconfont.js?v=1.1.0" ></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -247,7 +245,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="6">
-<input type="hidden" id="yelog_site_word_count" value="113">
+<input type="hidden" id="yelog_site_word_count" value="148">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -296,6 +294,10 @@
                 <i class="iconfont icon-tag"></i><a>private</a>
             </li>
         
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>structure</a>
+            </li>
+        
     </div>
 
 </div>
@@ -306,7 +308,7 @@
         
         <a  class="全部文章 study structure "
            href="/2023/08/31/study/structure/from0/01/"
-           data-tag=""
+           data-tag="structure"
            data-author="" >
             <span class="post-title" title="从 0 开始学架构 - 01 从 0 开始学架构">从 0 开始学架构 - 01 从 0 开始学架构</span>
             <span class="post-date" title="2023-08-31 03:08:52">2023/08/31</span>
@@ -466,25 +468,29 @@
 
 
 
-    <div id="comments"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comments">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81ODkzMS8zNTM5Mw==">
+        <script type="text/javascript">
+			(function(d, s) {
+				var j, e = d.getElementsByTagName(s)[0];
 
-<script type="text/javascript">
-    $.getScript('/js/gitalk.js', function () {
-        var gitalk = new Gitalk({
-            clientID: '911956414dadcf19d126',
-            clientSecret: 'f969262b2e2e4f7bce24f6c20a73516b0693d784',
-            repo: 'treesunmoon.github.io.git',
-            owner: 'treesunmoon',
-            admin: ['treesunmoon'],
-            id: decodeURI(location.pathname),
-            distractionFreeMode: 'true',
-            language: 'zh-CN',
-            perPage: parseInt('10',10)
-        })
-        gitalk.render('comments')
-    })
-</script>
+				if (typeof LivereTower === 'function') { return; }
+
+				j = d.createElement(s);
+				window.livereOptions = {
+					eagerLoading: true,
+					scrollEventTargetSelector: '#post'
+                }
+				j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+				j.async = true;
+				e.parentNode.insertBefore(j, e);
+			})(document, 'script');
+        </script>
+        <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
 
 
 
@@ -664,6 +670,16 @@
     /*文章列表背景图*/
     
 
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
     
 </style>
 
